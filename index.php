@@ -1,4 +1,4 @@
-<?php include "db.php"; ?>
+<?php include "logi.php"; ?>
 
 <!doctype html>
 <html lang="fr">
@@ -19,7 +19,7 @@
                     TyroServ BugTracker
                 </a>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search ID" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
             </div>
@@ -34,11 +34,13 @@
 
         <section id="list">
             <div class="list-group">
-                <button type="button" class="list-group-item list-group-item-action active" aria-current="true">First</button>
-                <button type="button" class="list-group-item list-group-item-action">Second</button>
-                <button type="button" class="list-group-item list-group-item-action">ss</button>
-                <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
-                <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+                <?php foreach($leResultatDeMaRequete as $post){ ?>
+
+
+                    <a href="unique.php?postId=<?php echo $post['id'] ?>" type="button" class="list-group-item list-group-item-action"><p>#<?php echo $post['id'] ?> | <?php echo $post['title'] ?></p><p style="text-align: right"></p></a>
+
+
+                <?php } ?>
             </div>
         </section>
 
