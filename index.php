@@ -21,13 +21,14 @@
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search ID" aria-label="Search">
                     <button class="btn btn-outline-dark" type="submit">Search</button>
+                    <button style="margin-left: 10px" class="btn btn-outline-dark">Create</button>
                 </form>
             </div>
         </nav>
     </header>
     <main>
         <section id="head">
-            <div style="padding: 40px">
+            <div style="color: white; padding: 60px; background-image: url('http://tyrolium.fr/Contenu/Image/Background9.png'); background-position: center;">
                 <H2>Bienvenue dans le trackeur de bug de TyroServ</H2>
             </div>
         </section>
@@ -37,7 +38,7 @@
                 <?php foreach($leResultatDeMaRequete as $post){ ?>
 
 
-                    <a href="unique.php?postId=<?php echo $post['id'] ?>" type="button" class="list-group-item list-group-item-action"><p>#<?php echo $post['id'] ?> | <?php echo $post['title'] ?></p><p style="text-align: right"></p></a>
+                    <a href="detail.php?postId=<?php echo $post['id'] ?>" type="button" class="list-group-item list-group-item-action"><p>#<?php echo $post['id'] ?> | <?php echo $post['title'] ?></p><p style="text-align: right"></p></a>
 
 
                 <?php } ?>
